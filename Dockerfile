@@ -1,7 +1,11 @@
-FROM python:3.6-slim-stretch
+FROM nvcr.io/nvidia/pytorch:20.03-py3
 
 RUN apt-get update && apt-get install -y git python3-dev gcc \
     && rm -rf /var/lib/apt/lists/*
+
+RUN cd / && git clone https://github.com/free-soellingeraj/fastai.git &&\
+    cd fastai; tools/run-after-git-clone &&\
+    pip install -e ".[dev]"
 
 COPY requirements.txt .
 
