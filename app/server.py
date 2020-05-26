@@ -10,7 +10,7 @@ from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
 export_file_url = 'https://drive.google.com/uc?export=download&id=10ex3tUtl73PQk8fMNO8jyj-3FeukBLtZ'
-export_file_name = 'prod-emotion-image.pkl'
+export_file_name = 'facial-emo-mod.pkl'
 
 classes = ['Anger', 'Disgust', 'Fear', 'Happiness', 'Neutral', 'Sadness', 'Surprise']
 path = Path(__file__).parent
